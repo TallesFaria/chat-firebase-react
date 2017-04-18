@@ -5,25 +5,22 @@ import * as CartActions from '../actions/cart'
 import Shelf from './shelf'
 
 class Cart extends Component {
-  constructor(props){
-    super(prop)
-  }
-  render() {
-
+    render() {
+    const CartItems = this.props.cart.map((item, idx) => {
+      return <li key={idx}>{item}</li>
+    })
     return (
-        const CartItems = this.props.cart.map((item, idx) => {
-            return <li key={idx}>{item}</li>
-        })
-        <div>
-            <Shelf addItem = {this.props.action.addToCart} />
-            <h2>Cart Items</h2>
-            <ol>{CartItems}</ol>
-        </div>
+
+      <div>
+        <Shelf addItem={this.props.action.addToCart} />
+        <h2>Cart Items</h2>
+        <ol>{CartItems}</ol>
+      </div >
     );
   }
 }
 
-function  mapStateToProps(state, prop) {
+function mapStateToProps(state, prop) {
   return {
     cart: state.cart
   }
