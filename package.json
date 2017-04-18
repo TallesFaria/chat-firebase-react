@@ -7,6 +7,8 @@
     "react-dom": "^15.5.4"
   },
   "devDependencies": {
+    "firebase": "^3.7.8",
+    "react-firebase": "^2.2.5",
     "react-scripts": "0.9.5"
   },
   "scripts": {
